@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>User Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+<p *ngIf="us">
+    Username - {{us.username | uppercase}}
+  </p>
+  <div *ngIf="us">
+    Name: <input [(ngModel)]="us.username" placeholder="name">
+    Password: <input [(ngModel)]="us.password" placeholder="name">
+    Contact no: <input [(ngModel)]="us.phone_number" placeholder="name">
+  <br>
+    <button (click)="save()">Update</button>
+  <button (click)="goBack()">Back</button>
+  </div>
+  </body>
+  </html>
